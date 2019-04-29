@@ -1,4 +1,4 @@
-/* Manejo del DOM */
+/* Manejo de data */
 // puedes ver como agregamos la función a nuestro objeto global window
 //DECLARAMOS NUESTROS ARRAY DEL JSON
 let arrayPokemon = POKEMON.pokemon;
@@ -10,15 +10,21 @@ const crearPlantilla = (data) => {
   data.forEach((personaje) => {
     //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
     mostrarTodos.innerHTML += `
-            <p class="number"><b>Nº</b> ${ personaje.num }</p>
-            <p class="character"><p><b> ${ personaje.name } </b></p>
-            <p class="image"><img src="${ personaje.img }"/></p>
-            <p class="type"><b>Tipo: </b> ${ personaje.weaknesses }</p>
-            <p class="weakness"><b>Debilidades: </b>${ personaje.weaknesses }</p>
-            <p class="egg"><b>Huevos: </b> ${personaje.egg }</p><br><br>
+            <div class="col-3">
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <img src="${ personaje.img }" /><br>
+            <b>Nº</b>${ personaje.num }</b><br>
+            <b>${ personaje.name }</b><br>
+            <b>Tipo </b><br> ${ personaje.weaknesses }</b><br>
+            <b>Debilidades </b><br> ${ personaje.weaknesses }<br>
+            <b>Huevos </b><br> ${personaje.egg }</b><br><br>
+            </div>
+            </div>
+            </div>
+            
     `;
   })
-
 }
 //MOSTRAMOS LA DATA DESDE EL JSON
 crearPlantilla(POKEMON.pokemon)
