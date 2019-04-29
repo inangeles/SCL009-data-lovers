@@ -1,10 +1,12 @@
 /* Manejo de data */
 //filtrar, ordenar y calculo
-window.data={
-    
-    // const filterName = arrayPokemon.filter(element => {
-    //     console.log(element.name);
-    // }),
+window.data = {
+  filterPokeType: (arr,type) => {
+    const pokeType = arr.filter(element=>{
+      return element.type.includes(type);
+    })
+    return pokeType;
+  }
 
 
 
@@ -14,5 +16,7 @@ window.data={
 
 
 }
+
+
 
 

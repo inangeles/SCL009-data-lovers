@@ -3,9 +3,8 @@
 //DECLARAMOS NUESTROS ARRAY DEL JSON
 let arrayPokemon = POKEMON.pokemon;
 //CONTENEDOR DONDE MOSTRAREMOS LA INFO
-const mostrarTodos = document.getElementById('root');
+const mostrarTodos = document.getElementById("root");
 const crearPlantilla = (data) => {
-  let plantillaTarjeta = '';
   //RECORREMOS EL ARRAY 
   data.forEach((personaje) => {
     //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
@@ -27,4 +26,17 @@ const crearPlantilla = (data) => {
   })
 }
 //MOSTRAMOS LA DATA DESDE EL JSON
-crearPlantilla(POKEMON.pokemon)
+crearPlantilla(arrayPokemon)
+
+
+const pokemonTypeMenu = document.querySelector(".pokemonTypes");
+
+pokemonTypeMenu.addEventListener("change", (event) => {
+    // const result = document.querySelector(".root");
+    // result.filterPokeType = $`{event.target.value}`;
+    const type = pokemonTypeMenu.value;
+    const mostrarTodos = filterPokeType(arrayPokemon, type);
+ 
+    showData(mostrarTodos);
+});
+
