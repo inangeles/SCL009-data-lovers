@@ -2,17 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title> ♥ PokeGuía ♥ </title>
+     <link rel="shortcut icon" href="https://vignette.wikia.nocookie.net/logopedia/images/3/3a/Pokemon_Go_App_icons.jpg/revision/latest?cb=20170115064149">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <!--<link rel="stylesheet" href="style.css" />-->
   </head>
   <body>
-    <div id="root"></div>
-  
+    <ul class="nav nav-tabs">
+         <li class="nav-item">
+        <a class="nav-link" href="#">Pokédex</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Clasificación</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Huevos</a>
+      </li>
+    </ul>
+      <div class="container">
+      <div class="row">      
+        <!--<div  class="col-lg-12"></div>-->
+          <div id="root"></div>
+          <div id="filter"></div>
+        </div>
+    </div>
     
 
 
 
-  <script src="./data/pokemon/pokemon.js"></script> 
+    <script src="./data/pokemon/pokemon.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script> 
   </body>
