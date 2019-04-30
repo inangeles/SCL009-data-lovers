@@ -1,83 +1,43 @@
-/* Manejo del DOM */
+
+/* Manejo de data */
+// puedes ver como agregamos la función a nuestro objeto global window
 //DECLARAMOS NUESTROS ARRAY DEL JSON
 let arrayPokemon = POKEMON.pokemon;
 //CONTENEDOR DONDE MOSTRAREMOS LA INFO
-const mostrarTodos = document.getElementById('root');
+const mostrarTodos = document.getElementById("root");
 const crearPlantilla = (data) => {
-//RECORREMOS EL ARRAY 
-data.forEach((personaje) => {
-//CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
+  //RECORREMOS EL ARRAY 
+  data.forEach((personaje) => {
+    //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
     mostrarTodos.innerHTML += `
-            <p class="number"><b>Nº</b> ${ personaje.num }</p>
-            <p class="character"><b> ${ personaje.name } </b></p>
-            <p class="image"><img src="${ personaje.img }"/></p>
-            <p class="type"><b>Tipo:</b> ${ personaje.type }</p>
-            <p class="weakness"><b>Debilidades:</b> ${ personaje.weaknesses }</b></p>
-            <p class="egg"><b>Huevos:</b> ${personaje.egg }</p><br><br>
+            <div class="col-3">
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <img src="${ personaje.img }" /><br>
+            <b>Nº</b>${ personaje.num }</b><br>
+            <b>${ personaje.name }</b><br>
+            <b>Tipo </b><br> ${ personaje.weaknesses }</b><br>
+            <b>Debilidades </b><br> ${ personaje.weaknesses }<br>
+            <b>Huevos </b><br> ${personaje.egg }</b><br><br>
+            </div>
+            </div>
+            </div>
+            
     `;
-  
   })
-  
 }
-crearPlantilla(POKEMON.pokemon)
+//MOSTRAMOS LA DATA DESDE EL JSON
+crearPlantilla(arrayPokemon)
 
 
+const pokemonTypeMenu = document.querySelector(".pokemonTypes");
 
-// let arrayTipo= (tipo) => {
-//     return  POKEMON.pokemon.type === "Grass"
+pokemonTypeMenu.addEventListener("change", (event) => {
+    // const result = document.querySelector(".root");
+    // result.filterPokeType = $`{event.target.value}`;
+    const type = pokemonTypeMenu.value;
+    const mostrarTodos = filterPokeType(arrayPokemon, type);
+ 
+    showData(mostrarTodos);
+});
 
-// }
-
-// let pokemonFilter = arrayPokemon.filter(arrayTipo)
-
-// console.log(pokemonFilter)
-
-
-
-function tipos (personaje){
-    return{
-        ...personaje, 
-        type: personaje.type
-    }
-}
-
-
-
-const filtroUno = POKEMON.pokemon.filter(personaje => personaje.num === '001');
-console.log('filtroUno', filtroUno);
-
-
-// const  fuego =(tipo) =>{
-//     return tipo.type === "Fire"
-// }
-
-// var arrayType=POKEMON.pokemon
-
-// var tipoFuego= arrayType.filter(fuego)
-
-// console.log(tipoFuego)
-
-
-
-// let arrayPokemonType = POKEMON.pokemon
-
-// function tipo (tipo) {
-//     var {pokemon:type}= tipo
-//     console.log ( `Tipos: ${type}`)
-
-// }
-
-// tipo(arrayPokemonType)
-
-
-
-
-
-// var tiposPokemon= arrayPokemon (tipo = ({type}) => type === "Grass" )
-
-
-// 	let poke=["fuego","agua","tierra"]
-
-// const result = poke.filter(tipo => tipo.length === "fuego");
-
-// console.log(result);

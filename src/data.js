@@ -1,12 +1,12 @@
 /* Manejo de data */
-// puedes ver como agregamos la función a nuestro objeto global window
+//filtrar, ordenar y calculo
+window.data = {
+  filterPokeType: (arr,type) => {
+    const pokeType = arr.filter(element=>{
+      return element.type.includes(type);
+    })
+    return pokeType;
+  }
 
 
-
-
-  /*  const filtroTipo = arrayPokemon.filter(tipo => tipo.type === 'Fire');
-
-    console.log('filtroTipo',filtroTipo);*/
-
-
- 
+}
