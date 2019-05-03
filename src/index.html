@@ -14,8 +14,10 @@
         </div>
       </div>
       </section>
+      <div class="container">
         <label>Filtrar por Tipo:
           <select class="filterByType" name="pokemonTypes" id="filterType">
+              <option value="selection"> - Seleccione - </option>
               <option value="Bug">Bug</option>
               <option value="Dragon">Dragon</option>
               <option value="Electric">Electric</option>
@@ -33,24 +35,34 @@
               <option value="Water">Water</option>
           </select>
         </label>
-        <label>Filtrar por Huevo:
-            <select class="filterByEgg" name="pokemonEggs">
-                <option value="2km">2 KM</option>
-                <option value="5km">5 KM</option>
-                <option value="10km">10 KM</option>
+          <label>Ordenar por Nombre:
+            <select class="order" name="order" id="orderPokemon" >
+                <option value="Selector2"> - Seleccione - </option>
+                <option value="AZ">Ordenar de A - Z</option>
+                <option value="ZA">Ordenar de Z - A</option>
             </select>
           </label>
+          <label>Filtrar por Huevo:
+            <select class="filterByEgg" name="pokemonEggs" id="filterEgg">
+                <option value="Selector3"> - Seleccione - </option>
+                <option value="2km">2 km</option>
+                <option value="5km">5 km</option>
+                <option value="10km">10 km</option>
+            </select>
+          </label>
+          </div>
+        
 
     <div class="row" id="root">
+      <div id="demo">
 
     </div>
 
-
-    <div class="row" id="hola">
-
-    </div>
+  
 
 
+
+    
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

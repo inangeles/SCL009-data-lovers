@@ -12,6 +12,36 @@ const filterPokeType = (data, condition)=>{
 
 window.filterPokeType=filterPokeType;
 
+const filterPokeEggs = (data, condition2)=>{
+  const resultFilterEgg = data.filter(element2 =>{
+    return element2.egg.includes(condition2);
+  }) 
+  return resultFilterEgg;
+}
+window.filterPokeEggs=filterPokeEggs;
+
+
+
+
+const OrderByPokeName = (data, index)=>{
+const pokemonOrder = data.filter(element3 =>{
+return element3.name.includes(index);
+
+ /* if(index == 1){
+  functionOrderAZ();
+  }
+
+  if(index == 2){
+  functionOrderZA();
+  }*/
+   return pokemonOrder; 
+})
+
+window.OrderByPokeName=OrderByPokeName;
+}
+
+
+
 
 // window.data = {
 //   filterPokeType: (data,condition) => {
