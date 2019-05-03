@@ -41,11 +41,10 @@
     console.log(pokemonType);
 
     pokemonType.forEach (pokemon =>{
-      return createCards(pokemonType)
+      return createCards(pokemonType);
     })
 
   })
-
 
   const selectEgg = document.getElementById("filterEgg");
   const containerEgg = document.getElementById("root");
@@ -54,68 +53,17 @@
     let condition2= selectEgg.options[selectEgg.selectedIndex].text;
     let pokemonEgg=window.filterPokeEggs(dataPokemon,condition2);
     pokemonEgg.forEach (pokemon =>{
-      return createCards(pokemonEgg)
+      return createCards(pokemonEgg);
     })
-
   })
 
-  const selectOrder = document.getElementById("orderPokemon");
-  const containerOrder = document.getElementById("root");
+  const selectAz = document.getElementById("orderPokemon");
+  const containerAz = document.getElementById("root");
 
-  selectOrder.addEventListener("change", () =>{
-    //let index = document.getElementById("orderPokemon").selectedIndex;
-   // let options = document.getElementById("orderPokemon").options;
-    let index= document.getElementById("orderPokemon").selectedIndex;
-
-    let pokemonOrder=window.OrderByPokeName(dataPokemon,index);
-    console.log(pokemonOrder);
-
+  selectAz.addEventListener("change", () =>{
+    let conditionAz= selectAz.options[selectEgg.selectedIndex].text;
+    let sortedAz=window.sortAz(dataPokemon,conditionAz);
+    sortedAz.forEach (pokemon =>{
+      return createCards(sortedAz);
     })
-
-   /* function functionOrderAZ() {    
-      dataPokemon.sort();
-      document.getElementById("root").innerHTML = dataPokemon;
-    } */
-
-  /*  function functionOrderZA() {    
-      dataPokemon.sort(); 
-      dataPokemon.reverse();   
-      document.getElementById("root").innerHTML = dataPokemon; */
-
-      //pokemonOrder.forEach (pokemon =>{
-      // return createCards(pokemonOrder)
-    // })
-
- /*   } */
-  
-
-
-  // var orderPokemon = dataPokemon
-  // document.getElementById("root").innerHTML = orderPokemon;
-
-  // function myFunction() {
-
-
-  //   orderPokemon.sort();  
-  //   document.getElementById("root").innerHTML = orderPokemon;
-  // }
-
-
-
-  /*// // OBTENIENDO VALOR DE TIPO SELECCIONADO POR USUARIO en dropdown
-  // document.getElementById("filterType").addEventListener("change", () => {
-  // let pokeType= document.getElementById("filterType");
-  // let chosenType= pokeType.options[pokeType.selectedIndex].text;
-  // console.log(chosenType);
-  // })
-
-  // let a = document.getElementById("filterType");
-  //  a.addEventListener("change", () => {
-  //   let pokeType= a.value;
-  //     if (pokeType === "Fire"){
-  //       window.filterPokeType(arrayPokemon);
-  //       crearPlantilla="";
-  //       crearPlantilla(arrayPokemon);
-  //     }
-
-  //   })*/
+  })
