@@ -31,13 +31,11 @@
   createCards(dataPokemon)
   
 
-
   // OBTENIENDO VALOR DE TIPO SELECCIONADO POR USUARIO EN DROPDOWN
   const selectType = document.getElementById("filterType");
   selectType.addEventListener("change", () =>{
     let condition= selectType.options[selectType.selectedIndex].text;
     let pokemonType=window.filterPokeType(dataPokemon,condition);
-
     pokemonType.forEach(()=>{
       return createCards(pokemonType);
     })
