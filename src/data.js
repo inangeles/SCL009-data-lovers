@@ -7,7 +7,6 @@ const filterPokeType = (data, condition)=>{
   }) 
   return resultFilter;
 }
-
 window.filterPokeType=filterPokeType;
 
 // FILTRANDO HUEVOS
@@ -20,23 +19,17 @@ const filterPokeEggs = (data, condition2)=>{
 window.filterPokeEggs=filterPokeEggs;
 
 
-// ORDENANDO DE LA A-Z
-const sortAz = (data) => {
-  const sortedPokemon = data.sort((a, b) => {
-    if (a.name > b.name)
-      return 1;
-    else if (a.name < b.name)
-      return -1;
-    return 0;
-  });
-  
-  return sortedPokemon;
-};
-window.sortAz=sortAz;
-
-
-
-
-
-
-
+// ORDENANDO ALFABETICAMENTE
+const sorting = (data, sortBy, sortOrder) => {
+  let sortedPokemons = [];
+  if(sortBy == "name"){
+    if(sortOrder == "asc"){
+      sortedPokemons=data.sort((a,b)=> a.name.localeCompare(b.name));
+    }
+    else if (sortOrder == "des"){
+      sortedPokemons=data.sort((a,b)=> a.name.localeCompare(b.name)).reverse();
+    }
+    return sortedPokemons;
+  }
+}
+window.sorting=sorting
