@@ -3,6 +3,33 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
+const data = [{
+    'name': 'Bulbasaur',
+    'egg': '2 km',
+    'num': '001',
+    'type': 'Grass'
+  },
+  {
+    'name': 'Charmander',
+    'egg': '2 km',
+    'num': '004',
+    'type': 'Fire'
+  },
+  {
+    'name': 'Squirtle',
+    'egg': '2 km',
+    'num': '007',
+    'type': 'Water'
+  },
+  {
+    'name': 'Ekans',
+    'egg': '5 km',
+    'num': '023',
+    'type': 'Poison'
+  }
+];
+
+describe('filterPokeType', () => {
 
 // describe('filterPokeType', () => {
   

@@ -8,6 +8,7 @@ const filterPokeType = (data, condition)=>{
   }) 
   return resultFilter;
 }
+
 window.filterPokeType=filterPokeType;
 
 // FILTRANDO HUEVOS
@@ -32,6 +33,7 @@ const sorting = (data, sortBy, sortOrder) => {
     }
     return sortedPokemons;
   }
+
 }
 window.sorting=sorting
 

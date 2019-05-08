@@ -8,7 +8,7 @@
   const createCards = (data) => {
     let pokemonCard ='';
   //RECORREMOS EL ARRAY 
-  data.forEach((pokemon) => {
+  data.forEach(pokemon => {
   //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
   let card = `
   <div class="col-md-4 my-3">
@@ -24,13 +24,13 @@
   </div>
   </div>
   `;
-  pokemonCard += card
+  pokemonCard += card;
   })
-  showAll.innerHTML=pokemonCard
+  showAll.innerHTML=pokemonCard;
   }
   //MOSTRAMOS LA DATA DESDE EL JSON
   createCards(dataPokemon)
-
+  
 
   // OBTENIENDO VALOR DE TIPO SELECCIONADO POR USUARIO EN DROPDOWN
   const selectType = document.getElementById("filterType"); 
@@ -41,10 +41,9 @@
     
     pokemonType.forEach (() =>{
       return createCards(pokemonType)
+
     })
-
-  })
-
+    })
 
   const selectEgg = document.getElementById("filterEgg");  
   selectEgg.addEventListener("change", () =>{
@@ -53,6 +52,7 @@
     pokemonEgg.forEach (() =>{
       return createCards(pokemonEgg)
     })
+
   })
 
   const selectSort = document.getElementById("orderPokemon")
@@ -65,14 +65,9 @@
     })
 })
 
-
-
 document.getElementById("reset").addEventListener("click", () =>{
     location.reload();
 })
-
-
-
 
  // const selectZA = document.getElementById("orderPokemon");
  // const containerZA = document.getElementById("root");
@@ -127,3 +122,4 @@ document.getElementById("reset").addEventListener("click", () =>{
   //     }
 
   //   })*/
+
