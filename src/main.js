@@ -2,6 +2,7 @@
   // puedes ver como agregamos la función a nuestro objeto global window
   //DECLARAMOS NUESTROS ARRAY DEL JSON
   let dataPokemon = window.POKEMON.pokemon;
+  let container= document.getElementById("container-result");
   //CONTENEDOR DONDE MOSTRAREMOS LA INFO
   const showAll = document.getElementById("root");
   const createCards = (data) => {
@@ -9,14 +10,14 @@
   //RECORREMOS EL ARRAY 
   data.forEach((pokemon) => {
   //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
-  card = `
-  <div class="col">
+  let card = `
+  <div class="col-md-4 my-3">
   <div class="card" style="width: 18rem;">
   <div class="card-body">
   <img src="${ pokemon.img }" /><br>
   <b>Nº </b>${ pokemon.num }</b><br>
   <b>${ pokemon.name }</b><br>
-  <b>Tipo </b><br> ${ pokemon.weaknesses }</b><br>
+  <b>Tipo </b><br> ${ pokemon.type }</b><br>
   <b>Debilidades </b><br> ${ pokemon.weaknesses }<br>
   <b>Huevos </b><br> ${pokemon.egg }</b><br><br>
   </div>
@@ -32,62 +33,69 @@
 
 
   // OBTENIENDO VALOR DE TIPO SELECCIONADO POR USUARIO EN DROPDOWN
-  const selectType = document.getElementById("filterType");
-  const containerType = document.getElementById("root");
-
+  const selectType = document.getElementById("filterType"); 
   selectType.addEventListener("change", () =>{
     let condition= selectType.options[selectType.selectedIndex].text;
     let pokemonType=window.filterPokeType(dataPokemon,condition);
-    console.log(pokemonType);
-
-    pokemonType.forEach (pokemon =>{
+    container.innerHTML="El " + window.computeStats(pokemonType) +"% del Total de Pokemones corresponde al tipo " + condition;
+    
+    pokemonType.forEach (() =>{
       return createCards(pokemonType)
     })
 
   })
 
 
-  const selectEgg = document.getElementById("filterEgg");
-  const containerEgg = document.getElementById("root");
-
+  const selectEgg = document.getElementById("filterEgg");  
   selectEgg.addEventListener("change", () =>{
     let condition2= selectEgg.options[selectEgg.selectedIndex].text;
     let pokemonEgg=window.filterPokeEggs(dataPokemon,condition2);
-    pokemonEgg.forEach (pokemon =>{
+    pokemonEgg.forEach (() =>{
       return createCards(pokemonEgg)
     })
-
   })
 
-  const selectOrder = document.getElementById("orderPokemon");
-  const containerOrder = document.getElementById("root");
-
-  selectOrder.addEventListener("change", () =>{
-    //let index = document.getElementById("orderPokemon").selectedIndex;
-   // let options = document.getElementById("orderPokemon").options;
-    let index= document.getElementById("orderPokemon").selectedIndex;
-
-    let pokemonOrder=window.OrderByPokeName(dataPokemon,index);
-    console.log(pokemonOrder);
-
+  const selectSort = document.getElementById("orderPokemon")
+  selectSort.addEventListener("change", () =>{
+    let conditionSortBy= selectSort.options[selectSort.selectedIndex].getAttribute("sortby");
+    let conditionOrderBy= selectSort.options[selectSort.selectedIndex].getAttribute("orderby");
+    let sortedAlph=window.sorting(dataPokemon,conditionSortBy,conditionOrderBy);
+    sortedAlph.forEach(()=>{
+      return createCards(sortedAlph);
     })
+})
 
-   /* function functionOrderAZ() {    
-      dataPokemon.sort();
-      document.getElementById("root").innerHTML = dataPokemon;
-    } */
 
-  /*  function functionOrderZA() {    
-      dataPokemon.sort(); 
-      dataPokemon.reverse();   
-      document.getElementById("root").innerHTML = dataPokemon; */
 
-      //pokemonOrder.forEach (pokemon =>{
-      // return createCards(pokemonOrder)
-    // })
+document.getElementById("reset").addEventListener("click", () =>{
+    location.reload();
+})
 
- /*   } */
-  
+
+
+
+ // const selectZA = document.getElementById("orderPokemon");
+ // const containerZA = document.getElementById("root");
+ //  selectZA.addEventListener("change", () =>{
+ //    let conditionZA= selectZA.options[selectZA.selectedIndex].text;
+ //    let sortedZA=window.sortZA(dataPokemon,conditionZA);
+ //    sortedZA.forEach (pokemon =>{
+ //      return createCards(sortedZA);
+ //    })
+ //  })
+
+
+
+//   const selectOrder = document.getElementById("orderPokemon");
+//   const containerOrder = document.getElementById("root");
+//   selectOrder.addEventListener("change", () =>{
+//   let index= document.getElementById("orderPokemon").selectedIndex;  
+//   let pokemonOrder=window.filterPokeOrder(dataPokemon,index);
+//   console.log(pokemonOrder);
+// // pokemonOrder.forEach (pokemon =>{
+//return createCards(pokemonOrder)
+//}
+//)
 
 
   // var orderPokemon = dataPokemon

@@ -1,0 +1,33 @@
+.clear{
+    margin-left: 100px;
+}
+#header {
+ background-image: url(banner.png);
+ background-repeat: no-repeat;
+ background-size: auto /* 1420px 512px */;
+ background-position: center;
+ padding-bottom: 10rem;
+ /* opacity: 0.9; */
+}
+#pokeselect {
+  background-image: url(fondo.jpg);
+  min-height: 400px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ /*  opacity: 0.5;  */
+  background-attachment: fixed;
+}
+
+ /* .root {
+  color: #000000;
+  background-color:rgba(255,255,255,0.6)
+} */
+
+.fondo-color {
+  /* background-color: #660066; */
+  background: linear-gradient(360deg,#cb3234 10%,#ffffff 70%);
+  /* #201240
+  #949494 */
+}
