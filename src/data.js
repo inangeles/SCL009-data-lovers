@@ -1,17 +1,15 @@
 /* Manejo de data */
-//filtrar, ordenar y calculo
 
-
-
+// FILTRANDO POR TIPO
 const filterPokeType = (data, condition)=>{
   const resultFilter = data.filter(element =>{
     return element.type.includes(condition);
   }) 
   return resultFilter;
 }
-
 window.filterPokeType=filterPokeType;
 
+// FILTRANDO HUEVOS
 const filterPokeEggs = (data, condition2)=>{
   const resultFilterEgg = data.filter(element2 =>{
     return element2.egg.includes(condition2);
@@ -21,55 +19,17 @@ const filterPokeEggs = (data, condition2)=>{
 window.filterPokeEggs=filterPokeEggs;
 
 
-
-
-const OrderByPokeName = (data, index)=>{
-const pokemonOrder = data.filter(element3 =>{
-return element3.name.includes(index);
-
- /* if(index == 1){
-  functionOrderAZ();
+// ORDENANDO ALFABETICAMENTE
+const sorting = (data, sortBy, sortOrder) => {
+  let sortedPokemons = [];
+  if(sortBy == "name"){
+    if(sortOrder == "asc"){
+      sortedPokemons=data.sort((a,b)=> a.name.localeCompare(b.name));
+    }
+    else if (sortOrder == "des"){
+      sortedPokemons=data.sort((a,b)=> a.name.localeCompare(b.name)).reverse();
+    }
+    return sortedPokemons;
   }
-
-  if(index == 2){
-  functionOrderZA();
-  }*/
-   return pokemonOrder; 
-})
-
-window.OrderByPokeName=OrderByPokeName;
 }
-
-
-
-
-// window.data = {
-//   filterPokeType: (data,condition) => {
-//     const pokemonByType = arr.filter(element=>{
-//       return element.type.includes("condition");
-//     })
-//     return pokemonByType;
-//   }
-
-/*filterPokeType(arrayPokemon, chosenType);
-
-
-// window.data = {
-//   filterPokeType: (arr,condition) => {
-//     const pokemonByType = arr.filter(element=>{
-//       return element.type.includes(condition);
-//     })
-//     return pokemonByType;
-//   }
-
-// filterPokeType(arrayPokemon, chosenType);
-//}
-
-//  const filterPokeType = (arr, condition) => {
-//     const pokemonByType = arr.filter(element=>{
-//       return element.type.includes(condition);
-//     });
-//     return pokemonByType;
-//   }
-
-//   window.filterPokeType = filterPokeType */
+window.sorting=sorting
