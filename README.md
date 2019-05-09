@@ -1,4 +1,5 @@
 # **Data Lovers**
+![Poke](https://i.ytimg.com/vi/DXAmPHPl470/maxresdefault.jpg)
 
 ## **Índice**
 
@@ -42,25 +43,26 @@ Por último, en "Filtro por huevos" puedes visualizar cuáles son los Pokémones
 
 ## **Historias de Usuarios**
 
-[Historias De Usuarios](https://ibb.co/hgPsP09)
+![Historias De Usuarios](Images/HistoriasDeUsuario.JPG)
 
 
 
 ## **Sketch de Solución**
 
-[Prototipo De Baja Fidelidad](https://ibb.co/TPTXC67)
+![Prototipo De Baja Fidelidad](Images/PrototipoBajaFidelidad.jpg)
 
 ## **Test de Usabilidad**
 
-[Test_Usuario1](https://www.youtube.com/watch?v=eOjUcLrdY8s)
+[Video : Test_Usuario1](https://www.youtube.com/watch?v=eOjUcLrdY8s)
 
-[Test_Usuario2](https://www.youtube.com/watch?v=eC8Un0XFiXc)
+[Video : Test_Usuario2](https://www.youtube.com/watch?v=eC8Un0XFiXc)
 
 Luego de realizar ambos test, obtuvimos feedback positivo , unicamente detectamos que debiamos crear interfaz en español.
 
 ## **Diseño de Interfaz**
 
-[Prototipo_Alta_Fidelidad](Link a Zeplin)
+Es posible ver el Prototipo de Alta Fidelidad en Zeplin en el siguiente 
+[Link](https://scene.zeplin.io/project/5cd369262e4f02039b760b5f)
 
 #### **Implementación de la Interfaz de Usuario (HTML/CSS/JS)** 
 Muestra la data en una interfaz a través de una tarjeta.
@@ -70,7 +72,7 @@ Se puede visualizar sin problemas desde distintos tamaños de pantallas: móvile
 
 ## **Planificación del Proyecto**
 
-Es posible ver la planificación del proyecto en el siguiente [link](<!-- trello -->)
+Es posible ver la planificación del proyecto en el siguiente [link](https://trello.com/b/J40832iW/pokemon-project)
 
 
 
