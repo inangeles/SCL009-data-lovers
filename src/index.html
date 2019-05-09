@@ -15,62 +15,64 @@
     <section id="header" class="bg-info p-5">
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <img src="https://fontmeme.com/permalink/190428/306f8850367a6aaa1c0e29a2258ceebc.png" alt="pokeguia-icon"/>
+          <img src="https://fontmeme.com/permalink/190428/306f8850367a6aaa1c0e29a2258ceebc.png" alt="pokeguia-icon" />
         </div>
       </div>
     </section>
   </header>
 
   <main>
-    <div class="container">
+    <div class="container-fluid sticky-top fondo-color py-4">
       <div class="row justify-content-center">
-      <label>Filtrar por Tipo:
-        <select class="filterByType" name="pokemonTypes" id="filterType">
-          <option value="selection"> - Seleccione - </option>
-          <option value="Bug">Bug</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Electric">Electric</option>
-          <option value="Fighting">Fighting</option>
-          <option value="Fire">Fire</option>
-          <option value="Flying">Flying</option>
-          <option value="Ghost">Ghost</option>
-          <option value="Grass">Grass</option>
-          <option value="Ground">Ground</option>
-          <option value="Ice">Ice</option>
-          <option value="Normal">Normal</option>
-          <option value="Poison">Poison</option>
-          <option value="Psychic">Psychic</option>
-          <option value="Rock">Rock</option>
-          <option value="Water">Water</option>
-        </select>
-      </label>
-      <label>Ordenar por Nombre:
-        <select class="order" name="order" id="orderPokemon">
-          <option value="Selector2"> - Seleccione - </option>
-          <option sortby="name" orderby="asc">Ordenar de A - Z</option>
-          <option sortby="name" orderby="des">Ordenar de Z - A</option>
-        </select>
-      </label>
-      <label>Filtrar por Huevo:
-        <select class="filterByEgg" name="pokemonEggs" id="filterEgg">
-          <option value="Selector3"> - Seleccione - </option>
-          <option value="2km">2 km</option>
-          <option value="5km">5 km</option>
-          <option value="10km">10 km</option>
-        </select>
-      </label>
-      <button id="reset" class="clear">Volver al Inicio</button>
+        <label class="px-3"><b>Filtrar por Tipo:</b>
+          <select class="filterByType" name="pokemonTypes" id="filterType">
+            <option value="selection"> - Seleccione - </option>
+            <option value="Bug">Bug</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Electric">Electric</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Fire">Fire</option>
+            <option value="Flying">Flying</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Grass">Grass</option>
+            <option value="Ground">Ground</option>
+            <option value="Ice">Ice</option>
+            <option value="Normal">Normal</option>
+            <option value="Poison">Poison</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Rock">Rock</option>
+            <option value="Water">Water</option>
+          </select>
+        </label>
+        <label class="px-3"><b>Ordenar por Nombre:</b>
+          <select class="order" name="order" id="orderPokemon">
+            <option value="Selector2"> - Seleccione - </option>
+            <option sortby="name" orderby="asc">Ordenar de A - Z</option>
+            <option sortby="name" orderby="des">Ordenar de Z - A</option>
+          </select>
+        </label>
+        <label class="px-3"><b>Filtrar por Huevo:</b>
+          <select class="filterByEgg" name="pokemonEggs" id="filterEgg">
+            <option value="Selector3"> - Seleccione - </option>
+            <option value="2km">2 km</option>
+            <option value="5km">5 km</option>
+            <option value="10km">10 km</option>
+          </select>
+        </label>
+        <button id="reset" class="clear">Volver al Inicio</button>
+      </div>
     </div>
-  </div>
-
-    <div class="row" id="root">
-      <div id="demo">
-
+    <div class="row justify-content-center" id="container-result">
+    </div>
+    <div class="container-text-center">
+      <div class="row" id="root">
       </div>
     </div>
   </main>
 
-
+  <footer>
+    <b>Developed by Paula Estay & Ma Angeles Morales</b>
+  </footer>
 
 
 

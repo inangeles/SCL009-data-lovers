@@ -1,9 +1,10 @@
   /* Manejo de DOM */
-  // puedes ver como agregamos la función a nuestro objeto global window
+  
   //DECLARAMOS NUESTROS ARRAY DEL JSON
   let dataPokemon = window.POKEMON.pokemon;
-  //CONTENEDOR DONDE MOSTRAREMOS LA INFO
+  let container = document.getElementById("container-result");
   const showAll = document.getElementById("root");
+   //CONTENEDOR DONDE MOSTRAREMOS LA INFO
   const createCards = (data) => {
     let pokemonCard ='';
   //RECORREMOS EL ARRAY 
@@ -31,16 +32,18 @@
   createCards(dataPokemon)
   
 
-  // OBTENIENDO VALOR DE TIPO SELECCIONADO POR USUARIO EN DROPDOWN
+  //SELECT TIPO POKEMON
   const selectType = document.getElementById("filterType");
   selectType.addEventListener("change", () =>{
-    let condition= selectType.options[selectType.selectedIndex].text;
+    let condition= selectType.options[selectType.selectedIndex].text; //OBTENIENDO VALOR DE TIPO SELECCIONADO POR USUARIO EN DROPDOWN
     let pokemonType=window.filterPokeType(dataPokemon,condition);
+    container.innerHTML="El " + window.computeStats(pokemonType,dataPokemon) + "% del total de Pokemones corresponde al tipo " + condition;
     pokemonType.forEach(()=>{
       return createCards(pokemonType);
     })
   })
-
+  
+  //SELECT TIPO HUEVO
   const selectEgg = document.getElementById("filterEgg");
   selectEgg.addEventListener("change", () =>{
     let condition2= selectEgg.options[selectEgg.selectedIndex].text;
@@ -50,6 +53,7 @@
     })
   })
 
+  //SELECT ORDENAR A-Z Y Z-A
   const selectSort = document.getElementById("orderPokemon")
   selectSort.addEventListener("change", () =>{
     let conditionSortBy= selectSort.options[selectSort.selectedIndex].getAttribute("sortby");
@@ -60,6 +64,9 @@
     })
   })
 
+  //BOTON VOLVER A INICIO
   document.getElementById("reset").addEventListener("click", () =>{
     location.reload();
   })
+
+  

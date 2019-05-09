@@ -29,6 +29,28 @@ const data = [{
   }
 ];
 
+const arr = [[{
+  'name': 'Bulbasaur',
+  'egg': '2 km',
+  'num': '001',
+  'type': 'Grass'
+}], [{
+  'name': 'Charmander',
+  'egg': '2 km',
+  'num': '004',
+  'type': 'Fire'
+}], [{
+  'name': 'Squirtle',
+  'egg': '2 km',
+  'num': '007',
+  'type': 'Water'
+}], [{
+  'name': 'Ekans',
+  'egg': '5 km',
+  'num': '023',
+  'type': 'Poison'
+}]];
+
 describe('filterPokeType', () => {
 
   it('debería ser una función', () => {
@@ -52,7 +74,9 @@ describe('filterPokeType', () => {
       'type': 'Poison'
     }])
   });
+})
 
+describe ('sorting', ()=> {
   it('deberia ser una funcion', () => {
     assert.equal(typeof sorting, 'function')
   });
@@ -112,5 +136,15 @@ describe('filterPokeType', () => {
       }
     ])
   });
-
 })
+
+describe ('computeStats', ()=> {
+  it('deberia ser una funcion', () => {
+    assert.equal(typeof computeStats, 'function')
+  });
+
+  it('deberia retornar 100 al calcular entre 4 objetos', () => {
+    assert.deepEqual(window.computeStats(arr,data),100)
+  });
+})
+

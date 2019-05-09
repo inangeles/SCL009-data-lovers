@@ -19,17 +19,22 @@ const filterPokeEggs = (data, condition2)=>{
 window.filterPokeEggs=filterPokeEggs;
 
 
-// ORDENANDO ALFABETICAMENTE
+//ORDENANDO ALFABETICAMENTE
 const sorting = (data, sortBy, sortOrder) => {
   let sortedPokemons = [];
-  if(sortBy == "name"){
     if(sortOrder == "asc"){
-      sortedPokemons=data.sort((a,b)=> a.name.localeCompare(b.name));
+      sortedPokemons=data.sort((a,b)=> a[sortBy].localeCompare(b[sortBy]));
     }
-    else if (sortOrder == "des"){
-      sortedPokemons=data.sort((a,b)=> a.name.localeCompare(b.name)).reverse();
+    else {
+      sortedPokemons=data.sort((a,b)=> a[sortBy].localeCompare(b[sortBy])).reverse();
     }
-    return sortedPokemons;
+  return sortedPokemons;
   }
-}
 window.sorting=sorting
+
+//CALCULO PORCENTAJE POR TIPO
+const computeStats = (arr, data) => {
+  let result = Math.round((arr.length * 100) / data.length);
+    return result;
+}
+window.computeStats=computeStats
