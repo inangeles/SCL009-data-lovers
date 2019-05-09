@@ -1,33 +1,30 @@
-.clear{
-    margin-left: 100px;
-}
-#header {
- background-image: url(banner.png);
- background-repeat: no-repeat;
- background-size: auto /* 1420px 512px */;
- background-position: center;
- padding-bottom: 10rem;
- /* opacity: 0.9; */
-}
-#pokeselect {
-  background-image: url(fondo.jpg);
-  min-height: 400px;
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
- /*  opacity: 0.5;  */
-  background-attachment: fixed;
+.fondo-color, .foot {
+  background: #071739;
+  color: white;
 }
 
- /* .root {
-  color: #000000;
-  background-color:rgba(255,255,255,0.6)
-} */
+#container-result {
+  padding-top: 10px;
+  font-weight: bold;
+}
 
-.fondo-color {
-  /* background-color: #660066; */
-  background: linear-gradient(360deg,#cb3234 10%,#ffffff 70%);
-  /* #201240
-  #949494 */
+.card {
+  background-color: #6497b1;
+  text-align: center;
+}
+
+.header-section {
+  background-color: #274684;
+}
+
+main {
+  background-color: #b3cde0;
+}
+
+.clear {
+  color:whitesmoke;
+  background: none;
+  border: none; 
+  font-weight:bold;
+  text-decoration: underline;
 }

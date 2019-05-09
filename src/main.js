@@ -11,11 +11,11 @@
   data.forEach(pokemon => {
   //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
   let card = `
-  <div class="col-md-4 my-3">
+  <div class="col-sm-6 col-md-4 my-3">
   <div class="card" style="width: 18rem;">
   <div class="card-body">
-  <img src="${ pokemon.img }" /><br>
-  <b>Nº </b>${ pokemon.num }</b><br>
+  <img src="${ pokemon.img }"/><br>
+  <b>Nº </b>${ pokemon.num }<br>
   <b>${ pokemon.name }</b><br>
   <b>Tipo </b><br> ${ pokemon.type }</b><br>
   <b>Debilidades </b><br> ${ pokemon.weaknesses }<br>
