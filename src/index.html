@@ -12,17 +12,19 @@
 
 <body>
   <header>
-    <section id="header" class="bg-info p-5">
+    <section id="header" class="p-5">
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <img src="https://fontmeme.com/permalink/190428/306f8850367a6aaa1c0e29a2258ceebc.png" alt="pokeguia-icon" />
-        </div>
+        <!--   <div class="row justify-content-center"> -->
+        <img
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/dba782a9-b78c-4f63-8302-dbafc8ae6b7a/dac9xxf-8d87f515-6d04-447b-8dde-6f65b9389d89.png"
+          alt="pokeball-icon" id="reset" class="clear">
+        <img src="https://fontmeme.com/permalink/190428/306f8850367a6aaa1c0e29a2258ceebc.png" alt="pokeguia-icon" />
       </div>
     </section>
   </header>
 
   <main>
-    <div class="container-fluid sticky-top fondo-color py-4">
+    <div class="container-fluid sticky-top  fondo-color py-4">
       <div class="row justify-content-center">
         <label class="px-3"><b>Filtrar por Tipo:</b>
           <select class="filterByType" name="pokemonTypes" id="filterType">
@@ -59,22 +61,22 @@
             <option value="10km">10 km</option>
           </select>
         </label>
-        <button id="reset" class="clear">Volver al Inicio</button>
+        <!-- <button id="reset" class="clear"><b>Volver al Inicio</b></button> -->
       </div>
     </div>
-    <div class="row justify-content-center" id="container-result">
-    </div>
-    <div class="container-text-center">
-      <div class="row" id="root">
-      </div>
-    </div>
-  </main>
 
+    <section id="pokeselect">
+      <div class="row justify-content-center" id="container-result"></div>
+      <div class="container-text-center">
+        <div class="row" id="root">
+        </div>
+      </div>
+    </section>
+  </main>
+  
   <footer>
     <b>Developed by Paula Estay & Ma Angeles Morales</b>
   </footer>
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

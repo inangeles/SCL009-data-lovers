@@ -11,7 +11,7 @@
   data.forEach(pokemon => {
   //CREAMOS LA TARJETA CON LOS ELEMENTOS DEL ARRAY
   let card = `
-  <div class="col">
+  <div class="col-md-4 my-3">
   <div class="card" style="width: 18rem;">
   <div class="card-body">
   <img src="${ pokemon.img }" /><br>
@@ -48,9 +48,10 @@
   selectEgg.addEventListener("change", () =>{
     let condition2= selectEgg.options[selectEgg.selectedIndex].text;
     let pokemonEgg=window.filterPokeEggs(dataPokemon,condition2);
-    pokemonEgg.forEach(()=>{
-      return createCards(pokemonEgg);
+    pokemonEgg.forEach (() =>{
+      return createCards(pokemonEgg)
     })
+
   })
 
   //SELECT ORDENAR A-Z Y Z-A
@@ -62,7 +63,7 @@
     sortedAlph.forEach(()=>{
       return createCards(sortedAlph);
     })
-  })
+})
 
   //BOTON VOLVER A INICIO
   document.getElementById("reset").addEventListener("click", () =>{

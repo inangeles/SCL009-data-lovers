@@ -1,4 +1,5 @@
 /* Manejo de data */
+//filtrar, ordenar y calculo
 
 // FILTRANDO POR TIPO
 const filterPokeType = (data, condition)=>{
@@ -7,6 +8,7 @@ const filterPokeType = (data, condition)=>{
   }) 
   return resultFilter;
 }
+
 window.filterPokeType=filterPokeType;
 
 // FILTRANDO HUEVOS

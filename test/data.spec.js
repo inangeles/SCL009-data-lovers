@@ -57,7 +57,7 @@ describe('filterPokeType', () => {
     assert.equal(typeof filterPokeType, 'function')
   });
 
-  it('debería retornar el objeto Squirtle al filtrar por tipo Agua', () => {
+   it('debería retornar el objeto Squirtle al filtrar por tipo Agua', () => {
     assert.deepEqual(window.filterPokeType(data, 'Water'), [{
       'name': 'Squirtle',
       'egg': '2 km',
@@ -66,7 +66,7 @@ describe('filterPokeType', () => {
     }])
   });
 
-  it('debería retornar el objeto Ekans al filtrar por Huevo 5 km', () => {
+   it('debería retornar el objeto Ekans al filtrar por Huevo 5 km', () => {
     assert.deepEqual(window.filterPokeEggs(data, '5 km'), [{
       'name': 'Ekans',
       'egg': '5 km',
@@ -81,7 +81,7 @@ describe ('sorting', ()=> {
     assert.equal(typeof sorting, 'function')
   });
 
-  it('deberia retornar objetos Bulbasaur, Charmander, Ekans, Squirtle al ordenar de la A a la Z', () => {
+   it('deberia retornar objetos Bulbasaur, Charmander, Ekans, Squirtle al ordenar de la A a la Z', () => {
     assert.deepEqual(window.sorting(data, 'name', 'asc'), [{
         'name': 'Bulbasaur',
         'egg': '2 km',
@@ -109,7 +109,7 @@ describe ('sorting', ()=> {
     ])
   });
 
-  it('deberia retornar objetos Squirtle, Ekans, Charmander, Bulbasaur al ordenar de la Z a la A', () => {
+   it('deberia retornar objetos Squirtle, Ekans, Charmander, Bulbasaur al ordenar de la Z a la A', () => {
     assert.deepEqual(window.sorting(data, 'name', 'des'), [{
         'name': 'Squirtle',
         'egg': '2 km',
