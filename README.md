@@ -23,7 +23,7 @@
 ## **Link PokeGuía**
 
 Podrás visualizar ésta página web en el siguiente link:
-[PokeGuía](https://github.com/paulaestayc/SCL009-data-lovers)<!-- pendiente link final -->
+[PokeGuía](https://inangeles.github.io/SCL009-data-lovers/src/index.html)
 
 
 ## **Modo de Uso**
