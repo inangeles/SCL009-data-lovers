@@ -1,9 +1,18 @@
   /* Manejo de DOM */
   
   //DECLARAMOS NUESTROS ARRAY DEL JSON
-  let dataPokemon = window.POKEMON.pokemon;
+  //let dataPokemon = window.POKEMON.pokemon;
+  fetch('https://raw.githubusercontent.com/inangeles/SCL009-data-lovers/master/src/data/pokemon/pokemon.json')
+  .then((response)=> response.json())
+  .then((data) => {
+    const dataPokemon = data.pokemon;
+    console.log(dataPokemon);
+  
+
+  //let dataPokemon = window.POKEMON.pokemon;
   let container = document.getElementById("container-result");
   const showAll = document.getElementById("root");
+
    //CONTENEDOR DONDE MOSTRAREMOS LA INFO
   const createCards = (data) => {
     let pokemonCard ='';
@@ -63,11 +72,11 @@
     sortedAlph.forEach(()=>{
       return createCards(sortedAlph);
     })
-})
+  })
 
   //BOTON VOLVER A INICIO
   document.getElementById("reset").addEventListener("click", () =>{
     location.reload();
   })
 
-  
+});

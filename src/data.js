@@ -8,7 +8,6 @@ const filterPokeType = (data, condition)=>{
   }) 
   return resultFilter;
 }
-
 window.filterPokeType=filterPokeType;
 
 // FILTRANDO HUEVOS
